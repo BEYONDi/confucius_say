@@ -6,13 +6,13 @@
   <div class="chatboxoptions">
     <%= link_to "<i class='fa fa-minus'></i> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @chat_id %>
     &nbsp;&nbsp;
-    <%= link_to "<i class='fa fa-times'></i> ".html_safe, "#", class: "clostChat", "data-cid" => @chat_id %>
+    <%= link_to "<i class='fa fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @chat_id %>
   </div>
   <br clear="all"/>
 </div>
 <div class="chatboxcontent">
-  <% if @message.any? %>
-    <%= render @message %>
+  <% if @messages.any? %>
+    <%= render @messages %>
   <% end %>
 </div>
 <div class="chatboxinput">

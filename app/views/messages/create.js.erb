@@ -2,7 +2,7 @@
   var id = "<%= @chat.id %>";
   var chatbox = $("#chatbox_" + id + " .chatboxcontent");
   var sender_id = "<%= @message.user.id %>";
-  var receiver_id = $('meta[name=user_id]').attr("content");
+  var receiver_id = $('meta[name=user-id]').attr("content");
 
   chatbox.append("<%= j render( partial: @message ) %>");
   chatbox.scrollTop(chatbox[0].scrollHeight);

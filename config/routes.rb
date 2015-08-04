@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get '/users' => 'users#index', as: 'users'
 
   authenticated :user do
-    # root 'users#index'
     root 'home#index'
   end
 

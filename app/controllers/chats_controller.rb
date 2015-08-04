@@ -1,11 +1,11 @@
 class ChatsController < ApplicationController
-  # before_filter :authenticate_user!
+  before_filter :authenticate_user!
   
-  # layout false
+  layout false
 
   def create
-    if Chat.between(params)[:sender_id], params[:receiver_id]).first
-      @chat = Chat.create!(chat_params)
+    if Chat.between(params[:sender_id], params[:receiver_id]).present?
+      @chat = Chat.between(params[:sender_id], params[:receiver_id]).first
     else
       @chat = Chat.create!(chat_params)
     end
