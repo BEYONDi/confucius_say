@@ -4,9 +4,9 @@
     <h1><%= @receiver.name %></h1>
   </div>
   <div class="chatboxoptions">
-    <%= link_to "<i class='fa fa-minus'></i> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @chat_id %>
+    <%= link_to "<i class='fa fa-minus'></i> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @chat.id %>
     &nbsp;&nbsp;
-    <%= link_to "<i class='fa fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @chat_id %>
+    <%= link_to "<i class='fa fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @chat.id %>
   </div>
   <br clear="all"/>
 </div>

@@ -75,9 +75,6 @@ var ready = function () {
          * Takes in two parameters. It is responsible for fetching the specific chat's
          * html page and appending it to the body of our home page e.g if chat_id = 1
          *
-         * $.get("chats/1, function(data){
-         *    // rest of the logic here
-         * }, "html")
          *
          * @param chat_id
          * @param minimizeChatBox
