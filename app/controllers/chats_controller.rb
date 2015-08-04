@@ -9,7 +9,7 @@ class ChatsController < ApplicationController
     else
       @chat = Chat.create!(chat_params)
     end
-    
+
     render json: { chat_id: @chat.id }
   end
 

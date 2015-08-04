@@ -1,9 +1,16 @@
 <h1>Confucius Say:</h1>
 <%= link_to('Logout', destroy_user_session_path, :method => :delete ) %>
+    <%# <% if current_user.free_user? %>
+    <% if !current_user.try(:premium?) && !current_user.try(:admin?) %>
+  <div class="panel">
+    <span>“The gem cannot be polished without friction, nor man perfected without trials.” - Confucius</span>
+  </div>
+    <% end %>
 <ul>
-    <% if !current_user.try(:admin?) %>
+    <%# <% if current_user.premium_user? %>
+    <% if current_user.try(:premium?) && !current_user.try(:admin?) %>
   <li>
-    <%= link_to "Ask Confucius", "#", class: "btn btn-success btn-xs start-chat", "data-sid" => current_user.id, "data-rip" => User.find(4) %>
+    <%= link_to "Ask Confucius", "#", class: "btn btn-success btn-xs start-chat", "data-sid" => current_user.id, "data-rip" => User.where( admin: :true ).first.id %>
   </li>
     <% end %>
     <% if current_user.try(:admin?) %>

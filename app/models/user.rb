@@ -13,8 +13,12 @@ class User < ActiveRecord::Base
 
   # devise :database_authenticatable, :registerable, :recoverable, :trackable, :validatable
 
-   def name
-     [first_name, last_name].join(' ')
-   end
+  # TODO NB: This does not work with devise's current_user this way...
+  # scope :free_user, -> { where(admin: :false, premium: :false) }
+  # scope :premium_user, -> { where(admin: :false, premium: :true) }
+
+  def name
+    [first_name, last_name].join(' ')
+  end
 
 end
