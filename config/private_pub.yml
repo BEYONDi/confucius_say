@@ -4,7 +4,11 @@ development:
 test:
   server: "http://localhost:9292/faye"
   secret_token: "secret"
+# production:
+#   server: "http://example.com/faye"
+#   secret_token: "2e24aec301877c4f327b77454024561cd9d42c4b7c189520e982d506e139e461"
+#   signature_expiration: 3600 # one hour
 production:
-  server: "http://example.com/faye"
-  secret_token: "2e24aec301877c4f327b77454024561cd9d42c4b7c189520e982d506e139e461"
-  signature_expiration: 3600 # one hour
+  server: "http://confucius-chat.herokuapp.com/faye"
+  secret_token: "MY_KEY"
+  signature_expiration: 86400 # one day
