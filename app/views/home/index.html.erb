@@ -1,10 +1,14 @@
 <h1>Confucius Say:</h1>
 
 <ul>
+    <% if !current_user.try(:admin?) %>
   <li>
     <%= link_to "Ask for Help", root_path %>
   </li>
+    <% end %>
   <li>
+    <% if current_user.try(:admin?) %>
     <%= link_to "Chat with a member", users_path %>
+    <% end %>
   </li>
 </ul>

@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   # devise_for :users
   devise_for :users, :controllers => { registrations: "registrations" }
 
+  get '/users' => 'users#index', as: 'users'
+
   authenticated :user do
-    root 'users#index'
+    # root 'users#index'
+    root 'home#index'
   end
 
   unauthenticated :user do
