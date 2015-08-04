@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :chats, :foreign_key => :sender_id
 
   validates :first_name, presence: true
-  # validates :last_name, presence: true
+  validates :last_name, presence: true
   validates :email, presence: true
 
 

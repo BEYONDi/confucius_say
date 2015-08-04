@@ -1,7 +1,7 @@
 <h1>Users</h1>
 <%= link_to('Logout', destroy_user_session_path, :method => :delete ) %>
 <hr/>
-
+<div class="panel panel-primary">
 <table class="table">
   <thead>
     <tr>
@@ -33,6 +33,6 @@
   <%# <%= paginate @contacts %>
   <%# <%= page_entries_info @contacts %>
 </table>
-
+</div>
 <br>
 <%# <%= link_to 'New User', new_user_path %>
